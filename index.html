@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tupi3D</title>
+<meta name="description" content="Tupi3D — a 3D modeling app for VR headsets. Stand inside your model at life scale and shape it with both hands. Coming soon to Meta Quest and Pico.">
+<meta property="og:title" content="Tupi3D">
+<meta property="og:description" content="Build worlds you can step into. Coming soon to Meta Quest and Pico.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --bg:#0c0f16;
+    --panel:#161c28;
+    --ink:#eef1f7;
+    --ink-dim:#aab4c6;
+    --ink-faint:#6a7689;
+    --line:#242c3b;
+    --accent:#6ea8fe;
+    --accent-2:#7ee0c8;
+    --accent-3:#f0a97a;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;
+    background:
+      radial-gradient(1100px 520px at 78% -10%,rgba(110,168,254,.16),transparent 60%),
+      radial-gradient(820px 460px at 8% 112%,rgba(126,224,200,.10),transparent 60%),
+      var(--bg);
+    color:var(--ink);font-family:var(--font);line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    display:flex;flex-direction:column;
+  }
+  .shell{
+    flex:1;width:100%;max-width:1080px;margin:0 auto;padding:40px 28px 56px;
+    display:flex;flex-direction:column;
+  }
+  .topline{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.01em;font-size:1.06rem}
+  .topline svg{width:26px;height:26px}
+
+  .hero{
+    flex:1;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;
+    padding:56px 0;
+  }
+  @media(max-width:880px){.hero{grid-template-columns:1fr;gap:36px;padding:40px 0 24px}}
+
+  h1.name{
+    font-size:4rem;font-weight:700;letter-spacing:-.03em;margin:0;line-height:1;
+  }
+  @media(max-width:880px){h1.name{font-size:2.9rem}}
+  .tagline{
+    font-size:1.5rem;font-weight:600;letter-spacing:-.015em;color:var(--ink);
+    margin:18px 0 0;
+  }
+  @media(max-width:880px){.tagline{font-size:1.2rem}}
+  .pitch{font-size:1.08rem;color:var(--ink-dim);margin:20px 0 0;max-width:42ch}
+
+  .benefits{list-style:none;padding:0;margin:34px 0 0;display:grid;gap:2px}
+  .benefits li{
+    display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:baseline;
+    padding:14px 0;border-top:1px solid var(--line);
+  }
+  .benefits li:last-child{border-bottom:1px solid var(--line)}
+  .benefits b{font-size:.95rem;font-weight:650;color:var(--ink)}
+  .benefits span{font-size:.95rem;color:var(--ink-dim)}
+  @media(max-width:520px){.benefits li{grid-template-columns:1fr;gap:2px}}
+
+  .status{
+    margin-top:36px;display:inline-flex;align-items:center;gap:10px;
+    font-size:.92rem;font-weight:600;color:var(--ink-dim);
+    background:var(--panel);border:1px solid var(--line);
+    padding:10px 16px;border-radius:999px;width:max-content;max-width:100%;
+  }
+  .status .dot{width:8px;height:8px;border-radius:50%;background:var(--accent-3);flex:0 0 auto}
+
+  .art{
+    background:linear-gradient(160deg,var(--panel),#10141d);
+    border:1px solid var(--line);border-radius:20px;padding:26px;
+  }
+  .art svg{display:block;width:100%;height:auto}
+
+  footer{
+    width:100%;max-width:1080px;margin:0 auto;padding:0 28px 30px;
+    color:var(--ink-faint);font-size:.82rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <div class="topline">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path d="M16 2 3 9.5v13L16 30l13-7.5v-13L16 2Z" stroke="#6ea8fe" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M16 2v28M3 9.5 16 16l13-6.5M16 16 3 22.5M16 16l13 6.5" stroke="#7ee0c8" stroke-width="1.2" opacity=".7"/>
+      <circle cx="16" cy="16" r="2" fill="#f0a97a"/>
+    </svg>
+    Tupi3D
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1 class="name">Tupi3D</h1>
+      <p class="tagline">Build worlds you can step into.</p>
+      <p class="pitch">Step past the screen and stand inside your model at life scale, shaping it with both hands.</p>
+
+      <ul class="benefits">
+        <li><b>Life scale</b><span>Walk around your work as it actually is.</span></li>
+        <li><b>Two hands</b><span>Reach out and shape the geometry directly.</span></li>
+        <li><b>No screen</b><span>No mouse, no viewport, no flat compromise.</span></li>
+      </ul>
+
+      <div class="status"><span class="dot"></span>Coming soon to Meta Quest and Pico</div>
+    </div>
+
+    <div class="art">
+      <svg viewBox="0 0 400 340" role="img" aria-label="A hand reaching into a wireframe form">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6ea8fe" stop-opacity=".32"/>
+            <stop offset="1" stop-color="#7ee0c8" stop-opacity=".06"/>
+          </linearGradient>
+        </defs>
+        <polygon points="200,30 332,98 332,242 200,310 68,242 68,98" fill="url(#g1)" stroke="#6ea8fe" stroke-width="1.5"/>
+        <path d="M200,30 200,170 200,310 M68,98 200,170 332,98 M68,242 200,170 332,242" stroke="#7ee0c8" stroke-width="1.1" opacity=".7" fill="none"/>
+        <path d="M134,64 266,64 M134,276 266,276 M68,170 332,170" stroke="#8ea0bd" stroke-width=".8" opacity=".35" fill="none"/>
+        <g fill="#eef1f7">
+          <circle cx="200" cy="30" r="3.4"/><circle cx="332" cy="98" r="3.4"/><circle cx="332" cy="242" r="3.4"/>
+          <circle cx="200" cy="310" r="3.4"/><circle cx="68" cy="242" r="3.4"/><circle cx="68" cy="98" r="3.4"/>
+        </g>
+        <circle cx="200" cy="170" r="5" fill="#f0a97a"/>
+        <circle cx="200" cy="170" r="13" fill="none" stroke="#f0a97a" stroke-width="1.3" opacity=".5"/>
+        <g stroke="#f0a97a" stroke-width="2.6" stroke-linecap="round" opacity=".95">
+          <path d="M252,226 l30,16"/><path d="M282,242 l-7,-15"/><path d="M282,242 l-15,5"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<footer>Tupi3D &mdash; VR 3D modeling. &copy; 2026.</footer>
+
+</body>
+</html>
