@@ -1,0 +1,13 @@
+{
+  "_comment": "The relay servers the app offers for sessions over the internet (Collab → Session). This copy ships with the app; a newer one is fetched from https://www.tupi3d.com/relay_servers.json when there is one, so a server can be moved or added without a new build. `id` is what a device remembers its choice by -- never reuse one for a different place. See scripts/net_relay_directory.gd and devdocs/relay_server.md. `secure_port` and `cert` are the server's encrypted (DTLS) door and the certificate it answers with, which the app pins -- see scripts/net_tls.gd; a server listed without them is reached in the clear. The certificate is public; its key never leaves the server (a backup is kept outside the repository).",
+  "servers": [
+    {
+      "id": "eu-frankfurt-1",
+      "name": "Europe (Frankfurt)",
+      "address": "152.70.45.5",
+      "port": 47660,
+      "secure_port": 47661,
+      "cert": "-----BEGIN CERTIFICATE-----\nMIIDETCCAfmgAwIBAgIVAOu32BcDEJ/L+6dZMz+tdV/bu2t4MA0GCSqGSIb3DQEB\nCwUAMDUxFTATBgNVBAMMDHR1cGkzZC1yZWxheTEPMA0GA1UECgwGVHVwaTNEMQsw\nCQYDVQQGEwJERTAgFw0yNjAxMDEwMDAwMDBaGA8yMDU2MDEwMTAwMDAwMFowNTEV\nMBMGA1UEAwwMdHVwaTNkLXJlbGF5MQ8wDQYDVQQKDAZUdXBpM0QxCzAJBgNVBAYT\nAkRFMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuxeNoEUsswut9eaN\ntY0skY92zxRNnXw/y1wg+Q6WbOxBO/SF4YEZ3sUp4o0ovplyzcRNCsKOdIrj/7Yo\nHnWIVgdNcZpxt5Bo3HAm9dnCMW8PL7HmeUh0m9kRA4Zi16xK6EP4/w0p6RECCAae\nrfsCHMFlBOpYlCyocMndbKMStcNUv67S9cOh07mU0QGUAm3Hh0JhrS8BusNJGIH4\n1qI59K7f6B435i7KyHNS07diI3cPRmxugRcublaBlPEoeplSEu+/uOjb0V6Mdw/b\nsUbdQCC489KDU/BDZJSqjgEHXjJYWylUWl5DZgReGcS7ytC2mAmCpPQt9ae6xcRq\ndc9dCwIDAQABoxYwFDASBgNVHRMBAf8ECDAGAQH/AgEAMA0GCSqGSIb3DQEBCwUA\nA4IBAQAY6Imn1gntWJWPsrjWsMb+1/25/erqr/5g2fq5vuJ41BqTsa+onwWwuXrK\nhNiRVGdoBI+qhTidyCY4rh4LnGTlmXjXrMXPRkrIW/ROQVlZCuxMNe2ZqLyk61fb\nO8KClg71CT9XPWY6/KpZGiaWvyo/6nPzHmXHsrz0e/UgZCOjQVDUPHijtAaMzfvU\nBLI3BVSnVowH5HatFB31yhtX0zQIIvEa/DsN7VO0EVNWbUfAEurOfdSxS3bcPJIF\nUiyat7GS0Fn0Uux2AiAb56RuLbl+7d/YeuEHT5ivcFbc8D6VOvsW4po3ritHL/SW\nm+a9UYtBH5s6KnPtyiIanZNW1x4K\n-----END CERTIFICATE-----"
+    }
+  ]
+}
