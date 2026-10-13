@@ -50,6 +50,8 @@
 <li>A random number created when the app is installed. A session host can use it to keep a device out of their session. It says nothing about you or your headset.</li>
 </ul>
 <p>Removing the app, or clearing its data in the headset's settings, deletes all of it.</p>
+<h2>Your hands</h2>
+<p>Hand tracking is off unless you turn it on (App, Controls). With it on, the positions of your hands and fingers are used on the headset to work the app, in place of the controllers. They are not recorded. In a shared session the other people see where your hands are, as they do with controllers.</p>
 <h2>The microphone</h2>
 <p>The microphone is off until you turn it on. With it on:</p>
 <ul>
@@ -69,7 +71,7 @@
 </ul>
 <p>Sessions are private: someone needs your room code, your address or to be on your network to join. The host can mute, remove or ban a participant.</p>
 <p>If you connect directly, the other devices can see your IP address. If you connect through our relay server, the relay sees it instead. The relay runs at Oracle Cloud in Frankfurt, Germany. It passes the session's data along and does not store or read it.</p>
-<p>Session data is not yet encrypted in transit. Do not share anything confidential in a session.</p>
+<p>Session data is encrypted in transit. When you connect through our relay, the app checks that it is talking to the real relay. When you connect directly to a host, the link is encrypted but the app cannot verify who the host is, so join only hosts you know. Versions of the app from before 13 October 2026 did not encrypt sessions.</p>
 <p>What you share with other people stays with them. We cannot remove it from their devices.</p>
 <h2>Live streaming</h2>
 <p>When you go live, the picture you see in the headset, the app's sound and your microphone (unless muted) are sent to the service you chose: Twitch, YouTube or a server you entered. The headset asks for your permission to capture the screen each time.</p>
