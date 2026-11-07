@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saci — Tupi3D for your PC</title>
+<meta name="description" content="Saci is Tupi3D's companion for your PC: your screens on boards in the headset, your projects both ways, renders on your graphics card, and your headset view in a window for OBS.">
+<meta property="og:title" content="Saci — Tupi3D for your PC">
+<meta property="og:description" content="Your PC, a hop away from your headset.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="/saci.png">
+<style>
+  :root{
+    --bg:#0c0f16;
+    --panel:#161c28;
+    --ink:#eef1f7;
+    --ink-dim:#aab4c6;
+    --ink-faint:#6a7689;
+    --line:#242c3b;
+    --accent:#6ea8fe;
+    --saci:#e24c3e;
+    --saci-light:#f68068;
+    --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;
+    background:
+      radial-gradient(1000px 500px at 80% -10%,rgba(226,76,62,.14),transparent 60%),
+      radial-gradient(820px 460px at 8% 112%,rgba(126,224,200,.08),transparent 60%),
+      var(--bg);
+    color:var(--ink);font-family:var(--font);line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .shell{width:100%;max-width:920px;margin:0 auto;padding:40px 24px 56px}
+  .topline{display:inline-flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.01em;font-size:1.06rem;
+    color:var(--ink);text-decoration:none}
+  .topline svg{width:26px;height:26px}
+
+  .hero{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;padding:56px 0 24px}
+  .hero img{width:168px;height:168px;border-radius:38px;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+  @media(max-width:640px){.hero{grid-template-columns:1fr;gap:24px;padding:36px 0 12px}.hero img{width:120px;height:120px;border-radius:28px}}
+  h1{font-size:3.6rem;font-weight:700;letter-spacing:-.03em;margin:0;line-height:1}
+  @media(max-width:640px){h1{font-size:2.7rem}}
+  .tagline{font-size:1.35rem;font-weight:600;letter-spacing:-.015em;margin:14px 0 0}
+  .pitch{color:var(--ink-dim);margin:14px 0 0;max-width:52ch}
+
+  .downloads{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 0}
+  .dl{
+    display:flex;flex-direction:column;gap:2px;min-width:230px;flex:1 1 230px;
+    padding:16px 20px;border-radius:14px;text-decoration:none;
+    background:var(--panel);border:1px solid var(--line);color:var(--ink);
+  }
+  .dl:hover{border-color:var(--saci-light)}
+  .dl.primary{background:linear-gradient(160deg,var(--saci-light),var(--saci));border-color:transparent;color:#fff}
+  .dl b{font-size:1.08rem}
+  .dl span{font-size:.88rem;opacity:.85}
+  .note{color:var(--ink-faint);font-size:.88rem;margin:12px 0 0}
+
+  .what{list-style:none;padding:0;margin:44px 0 0;display:grid;gap:2px}
+  .what li{display:grid;grid-template-columns:170px 1fr;gap:18px;align-items:baseline;padding:14px 0;border-top:1px solid var(--line)}
+  .what li:last-child{border-bottom:1px solid var(--line)}
+  .what b{font-size:.95rem;font-weight:650}
+  .what span{font-size:.95rem;color:var(--ink-dim)}
+  @media(max-width:560px){.what li{grid-template-columns:1fr;gap:2px}}
+
+  h2{font-size:1.2rem;margin:44px 0 10px;letter-spacing:-.01em}
+  ol{color:var(--ink-dim);padding-left:1.3em;margin:0}
+  ol li{margin:8px 0}
+  p.small{color:var(--ink-dim);font-size:.95rem}
+  a{color:var(--accent)}
+  code{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.9em;color:var(--ink)}
+
+  footer{width:100%;max-width:920px;margin:0 auto;padding:0 24px 30px;color:var(--ink-faint);font-size:.82rem}
+  footer a{color:inherit}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <a class="topline" href="/">
+    <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path d="M16 2 3 9.5v13L16 30l13-7.5v-13L16 2Z" stroke="#6ea8fe" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M16 2v28M3 9.5 16 16l13-6.5M16 16 3 22.5M16 16l13 6.5" stroke="#7ee0c8" stroke-width="1.2" opacity=".7"/>
+      <circle cx="16" cy="16" r="2" fill="#f0a97a"/>
+    </svg>
+    Tupi3D
+  </a>
+
+  <div class="hero">
+    <img src="/saci.png" alt="Saci's icon: a single bare footprint">
+    <div>
+      <h1>Saci</h1>
+      <p class="tagline">Your PC, a hop away from your headset.</p>
+      <p class="pitch">Saci is Tupi3D's companion for your computer. Named for the one-legged trickster of Brazilian legend, who hops from place to place, it carries you between the headset and your desk.</p>
+    </div>
+  </div>
+
+  <div class="downloads">
+    <a class="dl primary" href="https://github.com/andrekling/tupi3d-website/releases/latest/download/Saci-windows-x64.zip">
+      <b>Download for Windows</b><span>Windows 10 or 11, 64-bit &middot; zip</span>
+    </a>
+    <a class="dl" href="https://github.com/andrekling/tupi3d-website/releases/latest/download/Saci-linux-x64.tar.gz">
+      <b>Download for Linux</b><span>x86-64, X11 desktop &middot; tar.gz</span>
+    </a>
+  </div>
+  <p class="note">Beta. Free. Saci only answers headsets on your own home network. <a href="https://github.com/andrekling/tupi3d-website/releases">All versions</a></p>
+
+  <ul class="what">
+    <li><b>Your screens</b><span>Every monitor on its own board in the headset: point to move the mouse, the trigger clicks, the stick scrolls.</span></li>
+    <li><b>Your projects</b><span>Screenshots and videos from the headset land on the PC by themselves; whole projects go either way.</span></li>
+    <li><b>Your graphics card</b><span>Cycles renders and heavy modelling steps run on the PC and come back in seconds.</span></li>
+    <li><b>Your view</b><span>What the headset sees, in a window on the PC &mdash; ready for OBS.</span></li>
+  </ul>
+
+  <h2>Getting started</h2>
+  <ol>
+    <li>Unzip Saci somewhere it can stay and run <code>Saci.exe</code> (on Linux, <code>Saci.x86_64</code>). Windows may warn that the program is not signed yet: choose <i>More info</i>, then <i>Run anyway</i>. Allow it on <i>private</i> networks when the firewall asks.</li>
+    <li>In the headset, open Tupi3D and press <b>Saci</b> on Guarani's <b>Project</b> ring.</li>
+    <li>In AR, just look at the code in Saci's window. Otherwise pick your PC and type the password Saci shows. After the first time it connects by itself.</li>
+  </ol>
+  <p class="small">On Linux Saci needs <code>ffmpeg</code> (with <code>ffplay</code>) and <code>python3</code> from your distribution. Saci used to be called Tupi Desk; your pairings come along when you switch.</p>
+</div>
+
+<footer>Tupi3D &mdash; VR 3D modeling. &copy; 2026. &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/conduct.html">Code of Conduct</a> &nbsp;&middot;&nbsp; <a href="/imprint.html">Legal notice</a></footer>
+
+</body>
+</html>
