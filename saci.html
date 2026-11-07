@@ -47,13 +47,16 @@
 
   .downloads{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 0}
   .dl{
-    display:flex;flex-direction:column;gap:2px;min-width:230px;flex:1 1 230px;
+    display:flex;flex-direction:column;gap:2px;min-width:200px;flex:1 1 200px;
     padding:16px 20px;border-radius:14px;text-decoration:none;
     background:var(--panel);border:1px solid var(--line);color:var(--ink);
   }
   .dl:hover{border-color:var(--saci-light)}
   .dl.primary{background:linear-gradient(160deg,var(--saci-light),var(--saci));border-color:transparent;color:#fff}
-  .dl b{font-size:1.08rem}
+  .dl b{font-size:1.08rem;display:flex;align-items:center;gap:9px}
+  .dl b svg{width:20px;height:20px;flex:none}
+  .dl.soon{color:var(--ink-faint);border-style:dashed;cursor:default}
+  .dl.soon:hover{border-color:var(--line)}
   .dl span{font-size:.88rem;opacity:.85}
   .note{color:var(--ink-faint);font-size:.88rem;margin:12px 0 0}
 
@@ -92,25 +95,28 @@
     <div>
       <h1>Saci</h1>
       <p class="tagline">Your PC, a hop away from your headset.</p>
-      <p class="pitch">Saci is Tupi3D's companion for your computer. Named for the one-legged trickster of Brazilian legend, who hops from place to place, it carries you between the headset and your desk.</p>
+      <p class="pitch">Tupi3D's free companion for your computer, on Windows and Linux. macOS is coming soon.</p>
     </div>
   </div>
 
   <div class="downloads">
     <a class="dl primary" href="https://github.com/andrekling/tupi3d-website/releases/latest/download/Saci-windows-x64.zip">
-      <b>Download for Windows</b><span>Windows 10 or 11, 64-bit &middot; zip</span>
+      <b><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.6 10.4 4.6v6.9H3zM11.6 4.4 21 3v8.5h-9.4zM3 12.7h7.4v6.9L3 18.4zM11.6 12.7H21V21l-9.4-1.3z"/></svg> Download for Windows</b><span>Windows 10 or 11, 64-bit &middot; zip</span>
     </a>
     <a class="dl" href="https://github.com/andrekling/tupi3d-website/releases/latest/download/Saci-linux-x64.tar.gz">
-      <b>Download for Linux</b><span>x86-64, X11 desktop &middot; tar.gz</span>
+      <b><svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd" aria-hidden="true"><path d="M12 2.2c-3 0-4.6 2.5-4.6 5.4 0 1.5-.6 2.6-1.5 4-1 1.6-1.7 3.4-1.7 5.2 0 1 .3 1.9.8 2.6-.9.3-2.1.6-2.1 1.5 0 1 1.6 1 3.4 1 1.3 0 2.3-.4 3-.9.8.2 1.7.3 2.7.3s1.9-.1 2.7-.3c.7.5 1.7.9 3 .9 1.8 0 3.4 0 3.4-1 0-.9-1.2-1.2-2.1-1.5.5-.7.8-1.6.8-2.6 0-1.8-.7-3.6-1.7-5.2-.9-1.4-1.5-2.5-1.5-4 0-2.9-1.6-5.4-4.6-5.4zM12 10.6c-2 0-3.4 2.4-3.4 5.2 0 2.3 1.5 3.6 3.4 3.6s3.4-1.3 3.4-3.6c0-2.8-1.4-5.2-3.4-5.2zM10.4 5.5a.9 1.1 0 1 0 0 2.2.9 1.1 0 0 0 0-2.2zM13.6 5.5a.9 1.1 0 1 0 0 2.2.9 1.1 0 0 0 0-2.2z"/></svg> Download for Linux</b><span>x86-64, X11 desktop &middot; tar.gz</span>
     </a>
+    <div class="dl soon" aria-disabled="true">
+      <b><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2.1-3.6-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.1-1.2 2.9-2.4.9-1.3 1.3-2.6 1.3-2.7 0 0-2.4-1-2.4-4.1zM14 5.3c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg> macOS</b><span>Coming soon</span>
+    </div>
   </div>
-  <p class="note">Beta. Free. Saci only answers headsets on your own home network. <a href="https://github.com/andrekling/tupi3d-website/releases">All versions</a></p>
+  <p class="note">Beta. Saci only answers headsets on your own home network. <a href="https://github.com/andrekling/tupi3d-website/releases">All versions</a></p>
 
   <ul class="what">
-    <li><b>Your screens</b><span>Every monitor on its own board in the headset: point to move the mouse, the trigger clicks, the stick scrolls.</span></li>
-    <li><b>Your projects</b><span>Screenshots and videos from the headset land on the PC by themselves; whole projects go either way.</span></li>
-    <li><b>Your graphics card</b><span>Cycles renders and heavy modelling steps run on the PC and come back in seconds.</span></li>
-    <li><b>Your view</b><span>What the headset sees, in a window on the PC &mdash; ready for OBS.</span></li>
+    <li><b>Your screens</b><span>Each monitor on its own board in the headset, with mouse, clicks and scrolling.</span></li>
+    <li><b>Your files</b><span>Captures land on the PC by themselves; projects go either way.</span></li>
+    <li><b>Your graphics card</b><span>Cycles renders and heavy steps run on the PC, back in seconds.</span></li>
+    <li><b>Your view</b><span>The headset's view in a window on the PC, ready for OBS.</span></li>
   </ul>
 
   <h2>Getting started</h2>
