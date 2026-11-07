@@ -50,7 +50,7 @@
 <li>Your projects, models, textures, renders, screenshots and camera videos.</li>
 <li>Your settings, the display name you chose and your avatar's colour.</li>
 <li>Voice notes you record: your voice, your hand and head movement and pictures of the menus you used. They are files in your project.</li>
-<li>Sign-in tokens for Twitch, YouTube and Dropbox, if you sign in. "Sign out" removes them.</li>
+<li>Sign-in tokens for Twitch, YouTube, Facebook and Dropbox, if you sign in. "Sign out" removes them.</li>
 <li>The in-app browser's history, bookmarks and cookies.</li>
 <li>A random number created when the app is installed. A session host can use it to keep a device out of their session. It says nothing about you or your headset.</li>
 <li>The room-light estimate (a few colour and angle values), and a small, deliberately blurred 512x256 light map of the room, if you capture one.</li>
@@ -88,10 +88,11 @@
 <p>Session data is encrypted in transit. When you connect through our relay, the app checks that it is talking to the real relay. When you connect directly to a host, the link is encrypted but the app cannot verify who the host is, so join only hosts you know. Versions of the app from before 13 October 2026 did not encrypt sessions.</p>
 <p>What you share with other people stays with them. We cannot remove it from their devices.</p>
 <h2>Live streaming</h2>
-<p>When you go live, the picture you see in the headset, the app's sound and your microphone (unless muted) are sent to the service you chose: Twitch, YouTube or a server you entered. The headset asks for your permission to capture the screen each time.</p>
+<p>When you go live, the picture you see in the headset, the app's sound and your microphone (unless muted) are sent to the service you chose: Twitch, YouTube, Facebook or a server you entered. The headset asks for your permission to capture the screen each time.</p>
 <p>The camera tool uses the same screen-capture permission to make a video: the headset view is encoded to an H.264 MP4 and either saved in your project or sent to the LocalSend receiver you chose. It is not sent anywhere else.</p>
 <ul>
-<li><strong>Twitch:</strong> you sign in on Twitch's own page. Tupi3D reads your stream key and chat, sets your stream's title and sends the chat messages you type. Twitch's privacy notice applies: <a href="https://www.twitch.tv/p/legal/privacy-notice/">https://www.twitch.tv/p/legal/privacy-notice/</a></li>
+<li><strong>Twitch:</strong> you sign in on Twitch's own page. Tupi3D reads your stream key and chat, sets your stream's title, category and tags, and sends the chat messages you type. Twitch's privacy notice applies: <a href="https://www.twitch.tv/p/legal/privacy-notice/">https://www.twitch.tv/p/legal/privacy-notice/</a></li>
+<li><strong>Facebook:</strong> you can sign in on Facebook's own device page, or paste a server URL and stream key from Facebook Live Producer. Signing in lets Tupi3D read your name and create and end a live video on your account; it does not read your chat or viewer count. Meta's privacy notice applies: <a href="https://www.facebook.com/privacy/policy/">https://www.facebook.com/privacy/policy/</a></li>
 <li><strong>YouTube:</strong> Tupi3D uses YouTube API Services. You sign in on Google's own page. Tupi3D reads your channel's name, creates a stream key and a broadcast with your title and visibility, reads the viewer count and chat, and sends the chat messages you type. By using this feature you agree to the YouTube Terms of Service (<a href="https://www.youtube.com/t/terms">https://www.youtube.com/t/terms</a>). Google's privacy policy applies: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>. You can withdraw Tupi3D's access at any time at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</li>
 </ul>
 <p>The sign-in details stay on your headset. We never receive them.</p>
