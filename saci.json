@@ -1,0 +1,13 @@
+{
+  "tag": "saci-2026.11.07-c350038",
+  "assets": {
+    "Saci-linux-x64.tar.gz": {
+      "size": 33919563,
+      "sha256": "8d3bdaf8991943d9cfe17540c5e8bfe92b3c6c467218824d0ef1fb26c9d580ac"
+    },
+    "Saci-windows-x64.zip": {
+      "size": 202993954,
+      "sha256": "9fecbbfc84d05e25e6c194b02f6b51c5d97c7d5069abfabc507ad00dbc225334"
+    }
+  }
+}
